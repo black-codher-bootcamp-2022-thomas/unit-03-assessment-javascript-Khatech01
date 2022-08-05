@@ -1,0 +1,126 @@
+body {
+    font-size: x-large;
+    background-color: rgb(249, 249, 233);
+}
+
+h2 {
+    font-size: 30px;
+    font-style: oblique;
+    color: rgb(96, 56, 8);
+}
+
+/*+Style for each container on the vertical rule*/
+.timeline {
+    position: relative;
+    width: 50em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timeline::before {
+    content: "";
+    background: rgb(96, 56, 8);
+    width: 5px;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+}
+
+
+/*Box style*/
+.timeline-item {
+    margin: 16px 0;
+    width: 21.87em;
+    padding: 16px;
+    box-shadow: rgb(59 4 47 / 32%) 0px 20px 30px -10px;
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+}
+
+#modal-container {
+    width: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 60, 0, 0.596);
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: rgba(59, 4, 47, 0.315) 20px 20px 30px -10px;
+    color: darkslategray;
+  }
+
+/* Title */
+.timeline-item-title {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(96, 56, 8);
+}
+
+#modal-title {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(96, 56, 8);
+}
+
+
+/*Date style*/
+.timeline-item-date {
+    background: rgb(96, 56, 8);
+    border-radius: 2em;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -65px;
+    padding: 8px;
+    color: white;
+}
+
+#modal-date {
+    background: rgb(96, 56, 8);
+    border-radius: 2em;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -65px;
+    padding: 8px;
+    color: white;
+}
+
+/*Summary +Full description style*/
+.timeline-item-summary {
+    border-top: 2px dashed;
+    border-color: rgb(96, 56, 8) !important;
+    margin: 0;
+    padding: 30px;
+    counter-increment: section;
+    position: relative;
+    color: rgb(96, 56, 8);
+}
+
+#modal-full-description{
+    border-top: 2px dashed;
+    border-color: rgb(96, 56, 8) !important;
+    margin: 0;
+    padding: 30px;
+    counter-increment: section;
+    position: relative;
+    color: rgb(96, 56, 8);
+}
+
+/* button*/
+timelineItemMoreInfo {
+    background: none;
+    border: 2px solid rgb(96, 56, 8);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    cursor: alias;
+    display: block;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    color: rgb(96, 56, 8);
+}
