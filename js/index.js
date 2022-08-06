@@ -34,7 +34,6 @@ function getCard(index) {
   modalDate.appendChild(dateText);
   modalTitle.appendChild(titleText);
   modalFullDescription.appendChild(fullDescriptionText);
-
   modalContainer.appendChild(modalDate);
   modalContainer.appendChild(modalTitle);
   modalContainer.appendChild(modalFullDescription);
@@ -59,7 +58,7 @@ dates.map(({ date, title, summary }, index) => {
   const timelineItemTitle = document.createElement("h2");
   const timelineItemDate = document.createElement("span");
   const timelineItemSummary = document.createElement("p");
-  const timelineItemMoreInfo = document.createElement("button");
+  const timelineItemMoreInfoButton = document.createElement("button");
   const circle = document.createElement("div"); // date on the vertical bar timeline
 
   const titleText = document.createTextNode(title);
@@ -71,24 +70,24 @@ dates.map(({ date, title, summary }, index) => {
   timelineItemTitle.setAttribute("class", "timeline-item-title");
   timelineItemDate.setAttribute("class", "timeline-item-date");
   timelineItemSummary.setAttribute("class", "timeline-item-summary");
-  timelineItemMoreInfo.setAttribute("data-index", index);
+  timelineItemMoreInfoButton.setAttribute("data-index", index);
   circle.setAttribute("class", "timeline-circle");
 
+  
   timelineItemTitle.appendChild(titleText);
   timelineItemDate.appendChild(dateText);
   timelineItemSummary.appendChild(summaryText);
-  timelineItemMoreInfo.appendChild(timelineItemMoreInfoText);
-  circle.appendChild(dateText);
-
+  timelineItemMoreInfoButton.appendChild(timelineItemMoreInfoText);
+  // circle.appendChild(dateText);
 
   timelineItem.appendChild(timelineItemTitle);
   timelineItem.appendChild(timelineItemDate);
   timelineItem.appendChild(timelineItemSummary);
-  timelineItem.appendChild(timelineItemMoreInfo);
+  timelineItem.appendChild(timelineItemMoreInfoButton);
   timelineItem.appendChild(circle);
 
 
-timelineItemMoreInfo.addEventListener(
+  timelineItemMoreInfoButton.addEventListener(
     "click",
     (e) => {
       e.preventDefault();
