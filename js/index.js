@@ -30,6 +30,7 @@ function getCard(index) {
   const titleText = document.createTextNode(title);
   const fullDescriptionText = document.createTextNode(fullDescription);
 
+  
   // Append each new variables to tags created previously
   modalDate.appendChild(dateText);
   modalTitle.appendChild(titleText);
@@ -71,20 +72,19 @@ dates.map(({ date, title, summary }, index) => {
   timelineItemDate.setAttribute("class", "timeline-item-date");
   timelineItemSummary.setAttribute("class", "timeline-item-summary");
   timelineItemMoreInfoButton.setAttribute("data-index", index);
-  circle.setAttribute("class", "timeline-circle");
-
+  timelineItemMoreInfoButton.setAttribute("class", "timeline-item-more-info");
   
   timelineItemTitle.appendChild(titleText);
   timelineItemDate.appendChild(dateText);
   timelineItemSummary.appendChild(summaryText);
   timelineItemMoreInfoButton.appendChild(timelineItemMoreInfoText);
-  // circle.appendChild(dateText);
+
 
   timelineItem.appendChild(timelineItemTitle);
   timelineItem.appendChild(timelineItemDate);
   timelineItem.appendChild(timelineItemSummary);
   timelineItem.appendChild(timelineItemMoreInfoButton);
-  timelineItem.appendChild(circle);
+
 
 
   timelineItemMoreInfoButton.addEventListener(
