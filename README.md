@@ -62,7 +62,7 @@ The only HTML you should add to the `body` is in step 1. Everything else should 
    1. The full description must have the id `modal-full-description`
    1. The element that closes the modal must have the id `modal-close-button`
 1. Create an external stylesheet here `css/main.css` (see [CSS](#css) for more info)
-1. [Deployed to Netlify](https://docs.netlify.com/site-deploys/create-deploys/) and your [site's status badge](https://docs.netlify.com/monitor-sites/status-badges/) added to this file (`README.md`)
+1. [maymesbakery-khatech.netlify.app](https://docs.netlify.com/site-deploys/create-deploys/) and your [[![Netlify Status](https://api.netlify.com/api/v1/badges/7b0c76be-0603-401b-8acc-5789c4d00a2a/deploy-status)](https://app.netlify.com/sites/serene-rugelach-fa7418/deploys)](https://docs.netlify.com/monitor-sites/status-badges/) added to this file (`README.md`)
 
 ### CSS
 
