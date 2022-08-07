@@ -24,6 +24,7 @@ function getCard(index) {
   modalImage.setAttribute("id", "modal-image");
   modalImage.setAttribute("src", image);
   modalImage.setAttribute("alt", title);
+  modalImage.setAttribute("style","max-height:250px;")
 
   // Identify text from "DATA.JS" to each variable
   const dateText = document.createTextNode(date);
@@ -39,6 +40,7 @@ function getCard(index) {
   modalContainer.appendChild(modalTitle);
   modalContainer.appendChild(modalFullDescription);
   modalContainer.appendChild(modalImage);
+  modalContainer.appendChild(modalCloseButton)
 
   // Closing button event
   modalCloseButton.addEventListener(
@@ -60,7 +62,7 @@ dates.map(({ date, title, summary }, index) => {
   const timelineItemDate = document.createElement("span");
   const timelineItemSummary = document.createElement("p");
   const timelineItemMoreInfoButton = document.createElement("button");
-  const circle = document.createElement("div"); // date on the vertical bar timeline
+
 
   const titleText = document.createTextNode(title);
   const dateText = document.createTextNode(date);
